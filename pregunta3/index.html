@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Fecha</label>
+    <input type="date" id="fecha" name="fecha" placeholder="Fecha">
+    <br>
+    <label for="">Tipo de Bebida</label>
+    <input type="text" name="bebida" id="bebida" placeholder="Bebida">
+    <br>
+    <label for="">Cantidad de vasos</label>
+    <input type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
+    <br><br>
+    <button id="enviar" onclick="agregarFila()">Enviar</button>
+
+    <table id="tabla">
+        <tr>
+            <th>fecha</th>
+            <th>bebida</th>
+            <th>cantidad</th>
+            <th>mensaje</th>
+        </tr>
+    </table>
+    <script src="/pregunta3/script.js"></script>
+    <script>function agregarFila() {
+        var tabla = document.getElementById("tabla")
+        var fecha = document.getElementById("fecha").value
+        var bebida = document.getElementById("bebida").value
+        var cantidad = document.getElementById("cantidad").value
+        var row = tabla.insertRow(1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var mensaje = null;
+
+        cell1.innerHTML = fecha
+        cell2.innerHTML = bebida
+        cell3.innerHTML = cantidad
+        cell4.innerHTML = "beep"
+        }
+    </script>
+</body>
+</html>
